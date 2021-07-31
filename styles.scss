@@ -1,0 +1,83 @@
+@import url(https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap);
+
+html {    
+    font-size: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --spacing: 2px;
+    --blur: 0px;
+    --base: #ffc600;
+
+    --mt: 1.5rem;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Bai Jamjuree', sans-serif;
+    background-color: #193549;
+    color: white;
+    display: grid;
+    place-items: safe center;
+}
+
+h2 {
+    font-size: 3em;
+    text-align: center;
+
+    .highlight {
+        color: var(--base);
+    }
+}
+
+.container {
+    width: 98%;
+    margin-top: 3rem;
+}
+
+.controls {
+    margin-top: var(--mt);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    margin: 0 1rem;
+    padding: .4rem 0;
+    
+    input{
+        vertical-align: middle;
+        margin-left: .4rem;
+
+        &[type=range] {
+            cursor: pointer;
+        }
+    }    
+}
+
+.img-container {
+    margin-top: calc(var(--mt) + 1rem);
+
+    img {
+        display: block;
+        margin: 0 auto;
+        // width: 100%;
+        max-width: 100%;  
+        border-radius: 4px;
+        padding: var(--spacing);  
+        background-color: var(--base);
+        filter: blur(var(--blur));  
+    }
+}
